@@ -8,8 +8,6 @@ import { Animal } from './animal.model';
     <h1>Zoo Animal Tracker</h1>
   </div>
 
-  <animal-list [childAnimalList]="animalsList" (clickSender)="editAnimal($event)"></animal-list>
-
   `
 })
 
