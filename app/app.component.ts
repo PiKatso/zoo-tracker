@@ -6,10 +6,15 @@ import { Animal } from './animal.model';
   template: `
   <new-animal (newAnimalSender)="createNewAnimal($event)"></new-animal>
 
-  <animal-list [childAnimalList]="animalList" (editAnimalSender)="editAnimal($event)"></animal-list>
-
-  <div class="edit-animal">
-    <edit-animal [currentAnimal]="selectedAnimal" (editAnimalCompleteSender)="finishedEditing()"></edit-animal>
+  <div class="row">
+    <div class="col-md-6">
+      <animal-list [childAnimalList]="animalList" (editAnimalSender)="editAnimal($event)"></animal-list>
+    </div>
+    <div class="col-md-6">
+      <div class="edit-animal">
+        <edit-animal [currentAnimal]="selectedAnimal" (editAnimalCompleteSender)="finishedEditing()"></edit-animal>
+      </div>
+    </div>
   </div>
   `
 })
