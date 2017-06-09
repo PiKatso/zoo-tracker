@@ -25,7 +25,8 @@ import { Animal }  from './animal.model';
       <label>Dislikes:</label>
       <input class="form-control" #newDislikes>
       <button class="btn"
-       (click)="saveNewAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Add Animal</button>
+       (click)="saveNewAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value);
+       newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Add Animal</button>
   </form>
   `
 })

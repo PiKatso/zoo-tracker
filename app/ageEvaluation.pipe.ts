@@ -19,7 +19,7 @@ export class AgeEvaluationPipe implements PipeTransform {
     return output;
   } else if (ageSearch == "adult") {
     for (let animal of input) {
-      if (animal.age > 3) {
+      if (animal.age > 2) {
         output.push(animal);
       }
     }
