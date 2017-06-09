@@ -6,24 +6,16 @@ import { Animal }  from './animal.model';
   template: `
   <h1>Log New Animal</h1>
   <form class="form-inline">
-      <label>Species:</label>
-      <input class="form-control" #newSpecies>
-      <label>name:</label>
-      <input class="form-control" #newName>
-      <label>Age:</label>
-      <input class="form-control" #newAge>
-      <label>Diet:</label>
-      <input class="form-control" #newDiet>
-      <label>Location:</label>
-      <input class="form-control" #newLocation>
-      <label>Caretakers:</label>
-      <input class="form-control" #newCaretakers>
-      <label>Sex:</label>
-      <input class="form-control" #newSex>
-      <label>Likes:</label>
-      <input class="form-control" #newLikes>
-      <label>Dislikes:</label>
-      <input class="form-control" #newDislikes>
+      <input class="form-control" placeholder="enter species" #newSpecies>
+      <input class="form-control" placeholder="enter name" #newName>
+      <input class="form-control" placeholder="enter age" #newAge>
+      <input class="form-control" placeholder="enter diet" #newDiet>
+      <input class="form-control" placeholder="enter location" #newLocation>
+      <br>
+      <input class="form-control" placeholder="enter number of caretakers" #newCaretakers>
+      <input class="form-control" placeholder="enter gender" #newSex>
+      <input class="form-control" placeholder="enter likes" #newLikes>
+      <input class="form-control" placeholder="enter dislikes" #newDislikes>
       <button class="btn"
        (click)="saveNewAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value);
        newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Add Animal</button>
