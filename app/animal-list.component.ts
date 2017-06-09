@@ -16,7 +16,16 @@ import { Animal } from './animal.model';
     <button class="btn" (click)="editButtonClicked(animalShowDeets)">Edit</button>
   </div>
 
-  <div *ngFor="let animal of childAnimalList">
+<div class="age-search">
+    <label>Search Animals by Age</label>
+    <select (change)="onAgeSearch($event.target.value)">
+      <option value="young">Adolescents</option>
+      <option value="adult">Adults</option>
+      <option value="allAnimals" selected="selected">All Animals</option>
+    </select>
+  </div>
+
+  <div *ngFor="let animal of childAnimalList | ageEvaluation:filterByAge">
      <h4><a *ngIf="animal.showAnimal == null" (click)="showDeets(animal)">{{animal.species}}</a></h4>
   </div>
 
@@ -28,6 +37,11 @@ export class AnimalListComponent {
   @Output() editAnimalSender = new EventEmitter();
 
   animalShowDeets = null;
+  filterByAge: string = "allAnimals";
+
+  onAgeSearch(ageSelection) {
+    this.filterByAge = ageSelection;
+}
 
   showDeets(animal) {
     this.animalShowDeets = animal;
