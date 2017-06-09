@@ -1,4 +1,5 @@
 export class Animal {
+  showAnimal: boolean = null;
   constructor (
     public species: string,
     public name: string,
