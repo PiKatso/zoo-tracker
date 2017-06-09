@@ -21,10 +21,11 @@ import { Animal }  from './animal.model';
       <label>Sex:</label>
       <input class="form-control" #newSex>
       <label>Likes:</label>
-      <input class="form-control" #Likes>
+      <input class="form-control" #newLikes>
       <label>Dislikes:</label>
-      <input class="form-control" #Dislikes>
-      <button class="btn" (click)="saveNewAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Add Animal</button>
+      <input class="form-control" #newDislikes>
+      <button class="btn"
+       (click)="saveNewAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Add Animal</button>
   </form>
   `
 })
