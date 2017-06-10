@@ -4,7 +4,9 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-  <new-animal (newAnimalSender)="createNewAnimal($event)"></new-animal>
+  <div class="log-new-animal">
+    <new-animal (newAnimalSender)="createNewAnimal($event)"></new-animal>
+  </div>
 
   <div class="row">
     <div class="col-md-6">
