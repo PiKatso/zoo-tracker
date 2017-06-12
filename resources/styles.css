@@ -1,4 +1,10 @@
 .jumbotron {
   text-align: center;
-  background-image: url("../images/jungle.jpg");
+  color: white;
+
+  background: url("images/jungle.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
