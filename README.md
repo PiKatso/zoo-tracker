@@ -1,4 +1,4 @@
-# Kat & Kane Kombucha Kegs
+# PiKatso's Zoo
 
 This project uses Angular 2, TypeScript and JavaScript to create a taproom for the tracking and maintenance of the tap rooms kegs.
 
